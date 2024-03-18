@@ -494,12 +494,22 @@ header.active {
 
 .countdown-timer {
   display: flex; /* Arrange elements horizontally */
-  gap: 10px;  /* Add spacing between elements */
+  gap: 20px;  /* Add spacing between elements */
 }
 
 .days, .hours, .minutes, .seconds {
   font-weight: bold;
   font-size: 20px;  /* Adjust font size as desired */
+}
+
+.banner-count{
+  font-family: 'Great Vibes', cursive;;
+  font-size: 3.5em;
+}
+.count-words{
+  display: flex;
+  font-size: 20px; 
+  font-weight: bold;
 }
 
 
@@ -871,6 +881,7 @@ section p {
 .text-center {
   padding: 20px; /* Add some padding for spacing */
   font-size: 16px; /* Adjust font size as needed */
+  color: var(--primary);
 }
 
 .gift-btn {
@@ -921,9 +932,9 @@ section p {
 .button:hover .popup {  /* Existing styles (potentially unused) */
   display: block; /* Show popup on hover */
 }
-.text-center{
+.text-center-contact{
   font-family: 'Great Vibes', cursive;
-  font-size: 1.5em;
+  font-size: 3.5em;
 }
 /*--------------------------------------------------------------
 # Responsive Design
