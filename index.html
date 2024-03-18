@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="HTML, CSS, JavaScript, Bootstrap 5" />
+    <meta name="author" content="DStudio Technology (David)" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Wedding Salvatore&Tetiana</title>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header>
+      <a href="#" class="logo">Wedding</a>
+      <a class="menu" onclick="toggleMenu();" href="#"
+        ><ion-icon class="open" name="menu-outline"></ion-icon
+        ><ion-icon class="close" name="close-outline"></ion-icon>
+      </a>
+      <ul class="nav">
+        <li>
+          <a class="nav-btn active" href="/" onclick="resetHeader();"
+            ><ion-icon name="home-outline"></ion-icon
+          ></a>
+        </li>
+        <li>
+          <a class="nav-btn" href="#" data-target="about">about</a>
+        </li>
+        <li>
+          <a class="nav-btn" href="#" data-target="services">When&Where</a>
+        </li>
+        <li>
+          <a class="nav-btn" href="#" data-target="portfolio">RSVPs</a>
+        </li>
+        <li>
+          <a class="nav-btn" href="#" data-target="contact">Gift Registry</a>
+        </li>
+      </ul>
+      <div class="search">
+        <input type="text" id="searchInput" placeholder="Search" oninput="searchPages()" />
+        <ion-icon name="search-outline"></ion-icon>
+    </div>
+    
+    </header>
+    <!-- Mobile Navigation -->
+    <ul class="nav-mobile">
+      <li>
+        <a class="nav-btn active" href="/" onclick="resetHeader();"
+          ><ion-icon name="home-outline"></ion-icon
+        ></a>
+      </li>
+      <li>
+        <a class="nav-btn" href="#" data-target="about">about</a>
+      </li>
+      <li>
+        <a class="nav-btn" href="#" data-target="services">When&Where</a>
+      </li>
+      <li>
+        <a class="nav-btn" href="#" data-target="portfolio">RSVPs</a>
+      </li>
+      <li>
+        <a class="nav-btn" href="#" data-target="contact">gift registry</a>
+      </li>
+    </ul>
+    <!-- Banner -->
+    <div class="banner container-fluid">
+      <div class="bg-slide slide-1 active">
+        <div class="content">
+          <h1 class="animate__animated animate__fadeInUp">Wedding</h1>
+          <p class="animate__animated animate__fadeInUp animate__delay-1s">
+            Saturday - 20 April 2024 - 12:00
+          </p>
+          <div class="countdown-container">
+            <span class="banner-text">Countdown: </span>
+            <span class="countdown-timer">
+              <span class="days">00</span>
+              <span class="hours">00</span>
+              <span class="minutes">00</span>
+              <span class="seconds">00</span>
+            </span>
+          </div>
+        </div>
+        <div class="circle bg">
+          <img src="images\img wedding\backgrounddef.jpg" alt="" />
+          <div class="circle large">
+            <img src="images\img wedding\backgrounddef.jpg" alt="" />
+            <div class="circle small">
+              <img src="images\img wedding\backgrounddef.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+      <div class="bg-slide slide-2">
+        <div class="content">
+          <h1>ceremony</h1>
+            <p class="animate__animated animate__fadeInUp animate__delay-1s"> Chiesa del Patrocinio della Beata Vergine Maria e di San Filippo Neri </p>
+          </p>
+        </div>
+        <div class="circle bg">
+          <img src="images\img wedding\chiesabetter.jpg" alt="" />
+          <div class="circle large">
+            <img src="images\img wedding\chiesabetter.jpg" alt="" />
+            <div class="circle small">
+              <img src="images\img wedding\chiesabetter.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-slide slide-3">
+        <div class="content">
+          <h1>Join us</h1>
+          <p class="animate__animated animate__fadeInUp animate__delay-1s"> Hotel Grande Italia</p>
+          <p class="animate__animated animate__fadeInUp animate__delay-1s"> Piazzetta Vigo 1, 30015 Chioggia (VE), Italy </p>
+        </p>
+        </p>
+        </div>
+        <div class="circle bg">
+          <img src="images\img wedding\newsbouquet1.png" alt="" />
+          <div class="circle large">
+            <img src="images\img wedding\newsbouquet1.png" alt="" />
+            <div class="circle small">
+              <img src="images\img wedding\newsbouquet1.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <ul class="slide-loader animate__animated animate__fadeInUp">
+        <li>
+          <a class="slide-btn active" data-target="slide-1">1</a>
+        </li>
+        <li>
+          <a class="slide-btn" data-target="slide-2">2</a>
+        </li>
+        <li>
+          <a class="slide-btn" data-target="slide-3">3</a>
+        </li>
+      </ul>
+      
+      <div class="share-button share animate__animated animate__fadeInLeft" onclick="toggleMenu2()">
+        <p>share</p>
+        <a href="#"><ion-icon name="share-social-outline"></ion-icon></a>
+        <div class="share-menu" id="shareMenu">
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://julian.codefactory.live/" class="share-item">Facebook</a>
+            <a href="https://www.instagram.com/?url=https://julian.codefactory.live/" class="share-item">Instagram</a>
+            <a href="https://api.whatsapp.com/send?text=https://julian.codefactory.live/" class="share-item">WhatsApp</a>
+        </div>
+    </div>
+    
+
+      <div class="lead animate__animated animate__fadeInUp">
+        <svg viewBox="0 0 100 100" width="100" height="100">
+          <defs>
+            <path
+              id="circle"
+              d="
+          M 50, 50
+          m -37, 0
+          a 37,37 0 1,1 74,0
+          a 37,37 0 1,1 -74,0"
+            />
+          </defs>
+          <!-- <text font-size="17">
+            <textPath xlink:href="#circle">
+              Will you marry me, Baby...Yes I do...
+            </textPath>
+          </text> -->
+        </svg>
+        <a class="move-down" onclick="initNavigation()" href="#"
+          ><ion-icon name="chevron-down-outline"></ion-icon
+        ></a>
+      </div>
+    </div>
+    <!-- Main Start -->
+    <main>
+      <!-- About Section -->
+      <section id="about" class="about">
+        <div class="container">
+          <div class="row">
+            <h1>About Us</h1>
+          </div>
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="img-box">
+                <img class="img-fluid" src="images\img wedding\KissKazakhistan.jpg" alt="" />
+                <img class="corner-img top-right" src="images\img wedding\venicetogether.jpg" alt="" />  <img class="othercorner-img" src="images\img wedding\aboutusnew.jpg" alt="" />
+              </div>
+            </div>
+            
+            <div class="col-lg-6">
+              <img class="section-bg-img" src="./images/bg-tree.png" alt="" />
+              <h4>Our Love</h4>
+              <p>
+                Our story began 2 years ago. We met in Bratislava and couldn't stop talking. We chatted for 8 hours on our first date! The longest first date in the history of dating, probably. It was like catching up with someone you had known for many years. We met our families and friends very early on, and our first trip together to Sicily was two months after we met. We had a great year together, full of unforgettable moments that made us closer and happier every day. We both felt we wanted to do this for the rest of our lives. One day Tetiana arrived at Salvatore's house ready to spend a normal weekend together and found him in a hurry, well dressed and rather nervous. Then she noticed a beautiful huge bouquet of flowers on the bed. Her first thought was, "Is this a marriage proposal?" and of course when she turned to him, he was already on one knee and said to her in Italian, "Vuoi sposarmi?" It couldn't have been more perfect.
+              </p>
+              <p>
+                After the proposal we spent 5 months traveling around the world together. We went to 11 different countries in 2023! The most exciting part of the trip was to Central Asia. We are now blessed with so many great stories and memories! Once back in Vienna, we started planning our big day. We know it will be perfect because it is the day we will celebrate our love and share it with you.
+              </p>
+              <a class="nav-btn section-btn" href="#" data-target="services">Discover More</a>
+            </div>
+          </div>
+        
+        </div>
+      </section>
+      <!-- Services Section -->
+      <section id="services" class="services">
+        <div class="container">
+          <div class="row">
+            <h1>When & Where</h1>
+          </div>
+          <div class="row d-flex justify-content-center align-items-center">
+            <div class="col-lg-4 d-flex justify-content-center">
+              <div class="card">
+                <div class="img-box">
+                  <img src="images\img wedding\picturechioggia.jpg" alt="" />
+                </div>
+                <div class="details">
+                  <h4>Ceremony</h4>
+                  <p>
+                    Our wedding will be celebrated by Don Massimo on April 20, 2024 at 12:00 in Chiesa del Patrocinio della Beata Vergine Maria e di San Filippo Neri
+                  </p>
+                  <a class="section-btn" href="https://it.wikipedia.org/wiki/Chiesa_del_Patrocinio_della_Beata_Vergine_Maria_e_di_San_Filippo_Neri_(Chioggia)">Discover more</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 d-flex justify-content-center">
+              <div class="card">
+                <div class="img-box">
+                  <img src="images\img wedding\KissDesert.JPG" alt="" />
+                </div>
+                <div class="details">
+                  <h4>Party</h4>
+                  <p>
+                    After the ceremony, we welcome you to our lavish banquet! We will celebrate this special day at the Hotel Grande Italia. The restaurant is a only a 7-minute walk from the church.
+                  </p>
+                  <a class="section-btn" href="https://www.hotelgrandeitalia.com/en/">Discover more</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 d-flex justify-content-center">
+              <div class="card">
+                <div class="img-box">
+                  <img src="images\img wedding\chioggiainsieme.jpg" alt="" />
+                </div>
+                <div class="details">
+                  <h4>The City</h4>
+                  <p>
+                    Also known as "Piccola Venezia", Chioggia is a symphony of bridges, canals and calli where you can appreciate lifes according to the times dictated by the lagoon and the work of fishermen.
+                  </p>
+                 
+                  <a class="section-btn" href="https://www.chioggia.org/index.php?lingua=4">Discover more</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- RSPVs Section -->
+      <section id="contact" class="portfolio contact">
+        <div class="container">
+          <div class="row">
+            <h1>Travel Information & RSVPs</h1>
+          </div>
+      
+          <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+              <div class="card">
+                <img src="images\img wedding\WhatsApp Image 2024-03-13 at 21.29.56.jpeg" class="card-img-top" alt="">
+                <div class="card-body">
+                  <p>
+                    By train:
+                    You can hop off either in Padua (Stazione di Padova) or in Venice (Venezia Santa Lucia). Both from Padua and Venice you will have to take a bus to continue to Chioggia. 
+                    If you arrive with the train in Venice, we suggest you take a bus from the <a href="https://www.arrivaveneto.it/en/timetables/">Arriva Veneto company, line 80</a>.
+                    If you arrive in Padova, we suggest you take a bus of the BusItalia company, line <a href="https://www.fsbusitalia.it/content/fsbusitalia/it/turismo/collegamenti-integrati/chioggia-sottomarina-link.html">“Chioggia Sottomarina Link”</a>
+                  </p>
+                  <hr>
+                </div>
+              </div>
+            </div>
+      
+            <div class="col">
+              <div class="card">
+                <img src="images\img wedding\aereportnew.jpg" class="card-img-top" alt="">
+                <div class="card-body">
+                  <p>
+                    By plane: 
+                    Venice Marco Polo Airport is the international airport of Venice. The airport is 13 km from the center of Venice. It is named after the famous Venetian merchant and traveler Marco Polo.
+                    Travelling to and from the airport is easy, due to its vicinity to the city center and other towns. Chioggia is located about 65 km south from the airport. To arrive in Chioggia we recommend you to take a bus from the company Arriva Veneto. The bus line is number 85 and the journey takes an hour and a quarter. You can check the timetable on their <a href="https://www.arrivaveneto.it/en/timetables/">website.</a> 
+                  </p>
+                  <hr>
+                </div>
+              </div>
+            </div>
+      
+            <div class="col">
+              <div class="card">
+                <img src="images\img wedding\WhatsApp Image 2024-03-13 at 21.46.50.jpeg" class="card-img-top" alt="">
+                <div class="card-body">
+                  <p>
+                    For those who decide to stay a little bit longer – how to get to Venice from Chioggia:
+                    Beyond the bus (Arriva Veneto, line 80), you can also choose a journey that involves a waterbus (the famous vaporetto) a normal bus and a ferryboat! It is the line 11 of the public company responsible for public transportation, the ACTV. For information, please see <a href="https://www.arrivaveneto.it/en/timetables/">the link</a>
+                  </p>
+                  <hr>
+                </div>
+              </div>
+            </div>
+                
+
+
+          <div>
+            <iframe
+              style="border: 0; width: 100%; height: 350px"
+              src="https://www.google.com/maps/d/embed?mid=1daNooCScpydndtzejKUkOG9sjP9HNFI&ehbc=2E312F"
+              frameborder="0"
+              allowfullscreen
+            ></iframe>
+          </div>
+
+          <div class="row mt-5">
+            <div class="col-lg-4">
+              <div class="info">
+                <div class="address">
+                  <ion-icon name="location-outline"></ion-icon>
+                  <h4>Location:</h4>
+                  <p>Calle Forno Filippini 892, 30015 Chioggia (VE) </p>
+                </div>
+
+                <div class="email">
+                  <ion-icon name="mail-outline"></ion-icon>
+                  <h4>Email:</h4>
+                  <p>liccardo.doc@gmail.com</p>
+                  <p>tamaximenko@gmail.com</p>
+                </div>
+
+                <div class="phone">
+                  <ion-icon name="call-outline"></ion-icon>
+                  <h4>Call:</h4>
+                  <p>+43 (0)660 389 7057</p>
+                  <p>+421 951 116 423</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-8 mt-5 mt-lg-0">
+              <form action="https://formspree.io/f/mbjnkblb" method="post">
+                <div class="row">
+                  <div class="col-md-6 form-group">
+                    <input
+                      type="text"
+                      name="name"
+                      class="form-control"
+                      id="name"
+                      placeholder="Your Name"
+                      required
+                    />
+                  </div>
+                  <div class="col-md-6 form-group mt-3 mt-md-0">
+                    <input
+                      type="email"
+                      class="form-control"
+                      name="email"
+                      id="email"
+                      placeholder="Your Email"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="form-group mt-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="subject"
+                    id="subject"
+                    placeholder="Let us know if you are coming!"
+                    required
+                  />
+                </div>
+                <div class="form-group mt-3">
+                  <textarea
+                    class="form-control"
+                    name="message"
+                    rows="5"
+                    placeholder="Message"
+                    required
+                  ></textarea>
+                </div>
+                <div class="text-center">
+                  <button type="submit">Send Message</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+      <!-- Contact Section -->
+
+      <section id="contact" class="contact">
+        <div class="container">
+          <div class="row justify-content-center">
+            <p class="text-center">Please know that your presence at our the wedding is present enough! However, for friends and family who have been asking for gift ideas, we have created this button here:</p>
+            <button type="button" class="btn btn-primary gift-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              Gift
+            </button>
+          </div>
+        </div>
+      
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">IBAN</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                Salvatore Liccardo<br>
+                IBAN: AT59 2011 1823 4643 5500<br>
+                BIC: GIBAATWWXXX
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Thank you!</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      
+
+
+
+
+
+
+    </main>
+    <!-- Main End -->
+    <!-- javaScript Vendors -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script src="https://unpkg.com/ionicons@5.0.2/dist/ionicons/ionicons.js"></script>
+
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+
+    <!-- Customised javaScript -->
+    <script src="./js/isotope.js"></script>
+    <script src="./js/glightbox.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
