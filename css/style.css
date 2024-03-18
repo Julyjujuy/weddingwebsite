@@ -848,6 +848,13 @@ section p {
 .card-body p {
   font-size: 16px; /* Adjust font size for text content */
 }
+
+.row1 {
+  color: var(--primary);
+  font-size: 1.5em;
+}
+
+
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
